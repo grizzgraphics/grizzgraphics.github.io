@@ -8,6 +8,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800&subset=greek,latin' rel='stylesheet' type='text/css'>
   <script>
     $(document).ready(function(){
       /*
@@ -22,13 +23,22 @@
 
   });
   */
+      $(".showmore").click(function(){
+      $(".hid").toggle();
+        $(".showmore").css('display', 'none');
+        $(".second").addClass('addedsecond');
+    });
       $(".wrap").click(function(){
         $(".top").toggleClass("addedtop");
         $(".mid").toggleClass("addedmid");
         $(".bot").toggleClass("addedbot");
         $(".side").toggleClass("triggered");
-        $("body").toggleClass("pushed");        $(".sidebtn").toggleClass("sideopacity"); 
-
+        $(".gal").toggleClass("galpushed"); $("body").toggleClass("pushed");        $(".sidebtn").toggleClass("sideopacity"); 
+        $(".toptext").toggleClass("textadded"); 
+$(".textwrap").toggleClass("aboutadded"); 
+        $(".logo").toggleClass("logoadded"); $(".abouttext").toggleClass("abouttextadded"); 
+        $(".ban").toggleClass("addedban");
+        $(".fullban").toggleClass("addedfullban");
 
       });
       $('a[href*="#"]:not([href="#"])').click(function() {
@@ -47,18 +57,41 @@
 
     }); //final
   </script>
+  <script>
+    $(window).scroll(function() {
+      var y_scroll_pos = window.pageYOffset;
+      var scroll_pos_test = 150;
+
+
+      if(y_scroll_pos > scroll_pos_test) {
+        $(".nav").css("top", "0");
+      }
+      else {
+        $(".nav").css("top", "-80px");
+
+      }
+
+    });
+  </script>
 </head>
 <body>
+  <div class="nav">
+    <span class="navtexthead">Grizz <span class="navtextsub">G r a p h i c s</span></span>
+    
+  </div>
+  
   <div class="wrap">
     <span class="line top"></span>
     <span class="line mid"></span>
     <span class="line bot"></span>
   </div>
+  
+    
   <div class="side">
-    <a href="#" class="sidebtn"><span>Home</span></a>
-    <a href="#" class="sidebtn"><span>My Gallery</span></a>
-    <a href="#" class="sidebtn"><span>About Me</span></a>
-    <a href="#" class="sidebtn"><span>Contact</span></a>
+    <a href="#fir" class="sidebtn"><span>Home</span></a>
+    <a href="#sec" class="sidebtn"><span>My Gallery</span></a>
+    <a href="#thi" class="sidebtn"><span>About Me</span></a>
+    <a href="#fou" class="sidebtn"><span>Contact</span></a>
   </div>
   
   <div class="first card" id="fir">
@@ -74,12 +107,65 @@
   <h2 class="subtitle">
     G r a p h i c s  </h2>
     <center><a href="#sec" class="more"><i class="fa fa-arrow-down fa-2x"></i></a></center></div>
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/dghc6LhmV94?rel=0&amp;controls=0;&autoplay=1" frameborder="0" style="position:absolute;left:calc(50% - 280px);border:solid 5px #FFD427;bottom:4%;" allowfullscreen></iframe></center>
   </div>
   
   <div class="second card" id="sec">
-   
+    <h2 class="galleryheader subtitle">
+      My Gallery
+    </h2>
+   <div class="gallery">
+     
+     
+     <div class="gal palini"></div>
+     <div class="gal greekcodlogo"></div>
+     <div class="gal castle"></div>
+     <div class="gal karambit"></div>
+     <div class="gal outmindedd"></div>
+     <div class="gal ban castlel"></div>
+     <div class="gal ban loa "></div>
+     <div class="gal ban paliniban "></div>
+     <div class="gal ban prinor"></div>
+     <div class="gal ban baba hid"></div>
+     <div class="gal ban blaazed hid"></div>
+<div class="gal fullban outmind hid"></div>
+     <div class="gal fullban aloumni hid"></div>
+     <div class="gal fullban overwatch hid"></div>
+
+     
+     
+     
+    </div>
+    <center><a class="showmore">Show more</a></center>
   </div>
   
+  <div class="third card" id="thi">
+    <h1 class="galleryheader subtitle">
+      About
+    </h1>
+    <div class="logo"></div>
+    <div class="textwrap">
+      
+    <p class="abouttext">
+     
+      Grizz Graphics was created in December 2015. We specialise in everything that has to to do with Graphic Designs and this is our official website!
+    </p>
+    </div>
+  </div>
+  
+  <div class="fourth card" id="fou">
+    
+    <h2 class="galleryheader subtitle">
+      Contact
+    </h2>
+    <div class=" contact">
+      <p class="emailtext">
+        You can easily order whatever you like just by sending us an e-mail!<br>Email: <a href="mailto:grizzgraphicsdoped@gmail.com" style="color:#FFD427;"><span class="email">grizzgraphicsdoped@gmail.com</span></a><br><br>You can also support us by dropping a like to our <a href="https://www.facebook.com/GrizzDesigns/" class="fb" target="_blank">Facebook Page</a>, as well as subscribing to our <a href="https://www.youtube.com/channel/UCcUhBXFJ5Ha7O4CIBgNp1iA" class="yt" target="_blank" style="color:#E62117;">YouTube channel</a>.
+      </p>
+    
+    </div>
+    
+  </div>
   
 </body>
 </html>
